@@ -72,43 +72,127 @@
 //
 
 //challenge
+//
+// var jHeight = 150, kHeight = 120, jAge = 48, kAge = 36;
+// var jScore = jHeight + 5* jAge, kScore = kHeight + 5 * kHeight;
+//
+// if (jScore > kScore)
+// {
+//   console.log("j wins");
+// }
+// else if(jScore<kScore)
+// {
+//   console.log("k wins");
+// }
+// else {
+//   console.log("Draw");
+// }
+//
+// var newFriendAge = prompt("Whats your age yo?"), newFriendHeight = prompt("Whats your height yo?");
+// FriendScore = parseInt(newFriendHeight) + parseInt(5*newFriendAge);
+//
+// if (FriendScore > jScore && kScore)
+// {
+//   console.log("Friend Wins");
+// }
+// else if(FriendScore < jScore && kScore)
+// {
+//   if (jScore > kScore)
+//   {
+//     console.log("j wins");
+//   }
+//   else if(jScore<kScore)
+//   {
+//     console.log("k wins");
+//   }
+//   else {
+//     console.log("Draw");
+//   }
+// }
+// else {
+//   console.log("Draw by 3");
+// }
+// Functions
 
-var jHeight = 150, kHeight = 120, jAge = 48, kAge = 36;
-var jScore = jHeight + 5* jAge, kScore = kHeight + 5 * kHeight;
 
-if (jScore > kScore)
+// // array
+//
+// var names = ['John', 'Jane' , 'Mark'];
+// var years = new Array(1990,1976,1968);
+//
+// // console.log(names[0]);
+//
+// names[1] = 'Ben';
+// console.log(names);
+//
+// console.log(names);
+//
+// var john = ['John', 'Smith', 1990, 'teacher' , false];
+//
+// john.push('blue');
+// john.unshift('Mr.');
+// john.pop();
+// john.shift();
+// console.log(john);
+//
+// alert(john.indexOf('Smith'));
+//
+// if(john.indexOf('actor') === -1)
+// {
+//   console.log('John is not a teacher');
+// }
+//
+//
+
+// Obj
+
+
+// coding challenge 2
+
+
+var ages = [1957, 1965, 1994, 2013];
+var agescopy = new Array();
+
+for(i=0;i<ages.length;i++)
 {
-  console.log("j wins");
-}
-else if(jScore<kScore)
-{
-  console.log("k wins");
-}
-else {
-  console.log("Draw");
+  agescopy[i]= ages[i];
 }
 
-var newFriendAge = prompt("Whats your age yo?"), newFriendHeight = prompt("Whats your height yo?");
-FriendScore = parseInt(newFriendHeight) + parseInt(5*newFriendAge);
-
-if (FriendScore > jScore && kScore)
+for(i=0; i<ages.length;i++)
 {
-  console.log("Friend Wins");
-}
-else if(FriendScore < jScore && kScore)
-{
-  if (jScore > kScore)
+  if((2018 - ages[i]) >= 18)
   {
-    console.log("j wins");
+    console.log('Major');
   }
-  else if(jScore<kScore)
+  else
   {
-    console.log("k wins");
-  }
-  else {
-    console.log("Draw");
+    console.log('Minor');
   }
 }
-else {
-  console.log("Draw by 3");
+function printFullAge(ages)
+{
+  var newages = new Array();
+  var oput = new Array(ages.length);
+
+
+  for (i=0; i<ages.length; i++)
+  {
+    newages[i] = ages[i];
+    if((2018 - ages[i]) >= 18)
+    {
+      oput[i] = 'true';
+    }
+    else
+    {
+      oput[i] = 'false';
+    }
+
+  }
+  return oput;
 }
+var ages2 = [1987, 1968, 1979, 2016]
+var full_1 = printFullAge(ages);
+var full_2 = printFullAge(ages2);
+
+console.log(full_1);
+console.log(full_2);
